@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1"content="width=device-height, initial-scale=1" /> 
+ 
+        <title>2023 SGPA 3rd sem(2021 scheme)</title>
+        <script>
+
+            function calculate()
+                {
+        
+                var a=parseInt(document.getElementById("mat").value);
+                var b=parseInt(document.getElementById("phy").value);
+                var c=parseInt(document.getElementById("ele").value);
+                var d=parseInt(document.getElementById("civ").value);
+                var e=parseInt(document.getElementById("cad").value);
+                var f=parseInt(document.getElementById("phyl").value);
+                var g=parseInt(document.getElementById("elel").value);
+                var h=parseInt(document.getElementById("eng").value);
+                var i=parseInt(document.getElementById("idt").value);
+        
+               var aa=3*marks(a);
+               var ab=3*marks(b);
+               var ac=3*marks(c);
+               var ad=3*marks(d);
+               var ae=3*marks(e);
+               var af=1*marks(f);
+               var ag=1*marks(g);
+               var ah=2*marks(h);
+               var ai=1*marks(i);
+        
+                var z=((aa+ab+ac+ad+ae+af+ag+ah+ai)/200)*10;
+        
+               
+                document.getElementById("res").value=parseFloat(z);
+                }
+                
+                function marks(y)
+                {
+                    if(y>=90)
+                    return 10;
+                    else if (y<=89&&y>=80)
+                    return 9;
+                    else if (y<=79&&y>=70)
+                    return 8;
+                    else if (y<=69&&y>=60)
+                    return 7;
+                    else if (y<=59&&y>=50)
+                    return 6;
+                    else if (y<=49&&y>=45)
+                    return 5;
+                    else if (y<=44&&y>=40)
+                    return 4;
+                    else
+                    return 0;
+                    
+                }
+                </script>
+                <style>
+                    *{
+                        color: aliceblue;
+                    }
+            
+                    #calc {
+                       background-color:  rgba(4, 64, 44, 0.718);
+                       color:azure;
+                       padding: 0.5% 2% 0.5% 2%;
+                       font-size: 100%;
+                    }
+                    
+                    label{
+                       
+                        color: aliceblue;
+                        margin-top: 5%;
+                        font-weight: bold;
+                    }
+                    input{
+                        background-color: rgb(221, 239, 137);
+                        margin: 1% 0 2% 0 ;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 100%;
+                    }
+                   *{
+                    background:url(milky.png);
+                    background-size: cover;
+                   }
+                   #res{
+                    font-size: 200%;
+                    width: 150px;
+                    background-color: rgb(217, 237, 198);
+                    color: red;
+                   }
+                   #h{
+                    color: white;
+                    font-size: x-large;
+                    margin-bottom: 7%;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                   
+                   }
+        
+                    
+                </style>
+        
+        
+            </head>
+        <center>
+            <body id="bd">
+                <b id="h">PHYSICS CYCLE</b>
+                <br>
+                <br>
+                
+                <label>21MAT11/21         :  </label>
+                <br>
+                <input type="text" id="mat">
+            </br>
+                <label>21PHY12/22  :  </label>
+        </br>
+                <input type="text" id="phy">
+            </br>
+                <label>21ELE13/23 :  </label>
+        </br>
+                <input type="text" id="ele">
+            </br>
+                <label>21CIV14/24  :  </label>
+                <br>
+                <input type="text" id="civ">
+        
+            </br>
+                <label>21EVN15/25 :  </label>
+                <br>
+                <input type="text" id="cad">
+        
+            </br>
+                 <label>21PHYL16/26:  </label>
+                 <br>
+                 <input type="text" id="phyl">
+             </br>
+                <label>21ELEL17/27 :  </label>
+                <br>
+                <input type="text" id="elel">
+        
+            </br>
+            <label>21EGH18/28 :  </label>
+            <br>
+            <input type="text" id="eng">
+    
+        </br>
+                <label>21IDT19/29           :  </label>
+                <br>
+                <input type="text" id="idt">
+        
+            </br>
+               
+        
+            <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+        
+            <p style="color:rgb(251, 244, 244); font-size:large">Yourn SGPA is</p>
+            <input type="text" id="res" disabled>
+        
+        </center>
+            </body>
+          
+        
+        
+        </html>
